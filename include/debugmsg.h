@@ -160,7 +160,7 @@ inline void AdditionalInput(std::string& message, int counter, const std::wstrin
             message.replace(message.find(newInput), newInput.size(), replacement);
         }
 
-        AdditionalInput(message, counter + 1, rest...);
+        AdditionalInput(message, counter + 1, input, rest...);
     }
     else
     {
@@ -212,7 +212,7 @@ inline void AdditionalInput(std::string& message, int counter, const std::filesy
             message.replace(message.find(newInput), newInput.size(), replacement);
         }
 
-        AdditionalInput(message, counter + 1, rest...);
+        AdditionalInput(message, counter + 1, input, rest...);
     }
     else
     {
@@ -238,7 +238,7 @@ inline void AdditionalInput(std::string& message, int counter, type input, other
             message.replace(message.find(newInput), newInput.size(), replacement);
         }
 
-        AdditionalInput(message, counter + 1, rest...);
+        AdditionalInput(message, counter + 1, input, rest...);
     }
     else
     {
@@ -357,7 +357,7 @@ inline void AdditionalInput(std::wstring& message, int counter, const std::strin
             message.replace(message.find(newInput), newInput.size(), replacement);
         }
 
-        AdditionalInput(message, counter + 1, rest...);
+        AdditionalInput(message, counter + 1, input, rest...);
     }
     else
     {
@@ -383,7 +383,7 @@ inline void AdditionalInput(std::wstring& message, int counter, const std::strin
             message.replace(message.find(newInput), newInput.size(), replacement);
         }
 
-        AdditionalInput(message, counter + 1, rest...);
+        AdditionalInput(message, counter + 1, input, rest...);
     }
     else
     {
@@ -409,7 +409,7 @@ inline void AdditionalInput(std::wstring& message, int counter, const std::files
             message.replace(message.find(newInput), newInput.size(), replacement);
         }
 
-        AdditionalInput(message, counter + 1, rest...);
+        AdditionalInput(message, counter + 1, input, rest...);
     }
     else
     {
@@ -435,7 +435,7 @@ inline void AdditionalInput(std::wstring& message, int counter, type input, othe
             message.replace(message.find(newInput), newInput.size(), replacement);
         }
 
-        AdditionalInput(message, counter + 1, rest...);
+        AdditionalInput(message, counter + 1, input, rest...);
     }
     else
     {

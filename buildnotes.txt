@@ -1,0 +1,3 @@
+-Need to force include include/Global.h
+-Which version of VS is this targetting? Many issues in VS2019
+-Must target 32 bit due to Havok, but CMake generated x64 for me..

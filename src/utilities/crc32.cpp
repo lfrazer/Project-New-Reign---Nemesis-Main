@@ -48,11 +48,11 @@ void nemesis::CRC32::PartialCRC(uint* iCRC, const unsigned char* sData, size_t i
 
 void nemesis::CRC32::FullCRC(const unsigned char* sData, size_t iDataLength, uint* iOutCRC)
 {
-    ((uint) *iOutCRC) = initial;
+    (*iOutCRC) = initial;
 
     PartialCRC(iOutCRC, sData, iDataLength);
 
-    ((uint) *iOutCRC) ^= finalxor;
+    (*iOutCRC) ^= finalxor;
 }
 
 void nemesis::CRC32::FullCRC(const char* sData, size_t iLength, uint* iOutCRC) 
@@ -86,7 +86,7 @@ uint nemesis::CRC32::FullCRC(const std::string& sData)
 
 bool nemesis::CRC32::FileCRC(const char* sFileName, uint* iOutCRC, size_t iBufferSize)
 {
-    ((uint) *iOutCRC) = initial;
+    (*iOutCRC) = initial;
 
     FILE* fSource       = NULL;
     unsigned char* sBuf = NULL;
@@ -111,7 +111,7 @@ bool nemesis::CRC32::FileCRC(const char* sFileName, uint* iOutCRC, size_t iBuffe
     free(sBuf);
     fclose(fSource);
 
-    ((uint) *iOutCRC) ^= finalxor;
+    (*iOutCRC) ^= finalxor;
 
     return true;
 }

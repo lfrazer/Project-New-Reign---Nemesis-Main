@@ -578,7 +578,7 @@ void BehaviorSub::CompilingAnimData()
 
         if (error) return;
 
-        auto& bhvtemp = BehaviorTemplate->grouplist.find(lowerBehaviorFile);
+        auto bhvtemp = BehaviorTemplate->grouplist.find(lowerBehaviorFile);
 
         // check for having newAnimation for the file
         if (bhvtemp != BehaviorTemplate->grouplist.end() && bhvtemp->second.size() > 0)

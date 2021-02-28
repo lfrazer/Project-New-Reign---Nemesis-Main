@@ -268,7 +268,7 @@ void getlinkedline(const nemesis::LinkedVar<std::string>& linkedline, VecStr& st
 template<typename _Type>
 void getlinkedline(const nemesis::LinkedVar<_Type>& linkedtype, VecStr& storeline)
 {
-    unordered_map<string, vector<const nemesis::CondVar<_Type>*>> modcodelist;
+    std::unordered_map<std::string, std::vector<const nemesis::CondVar<_Type>*>> modcodelist;
 
     for (auto& cond : linkedtype.nestedcond)
     {
