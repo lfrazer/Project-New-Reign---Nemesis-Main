@@ -2172,6 +2172,16 @@ void UpdateFilesStart::newAnimUpdate(string sourcefolder, string curCode)
 
                     DebugLogging("New Animations extraction start (Folder: " + curfolderstr + ")");
 
+                    // lfrazer: Skip this condition which seems to crash.. not sure what the implications are
+                    if (newFile[nemesis::to_lower_copy(beh)].get() == nullptr)
+                    {
+                        OutputDebugStringA("newFile invalid ptr for behavior: ");
+                        OutputDebugStringA(beh.c_str());
+                        OutputDebugStringA("\n");
+						newAnimFunction = false;
+						return;
+                    }
+
                     if (!newAnimUpdateExt(folderpath,
                                           curCode,
                                           nemesis::to_lower_copy(beh),
