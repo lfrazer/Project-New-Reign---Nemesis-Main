@@ -3,6 +3,8 @@
 
 #include "utilities/animationsconvert.h"
 
+hkMemoryRouter* AnimationsConvert::_memoryRouter = nullptr;
+
 AnimationsConvert::AnimationsConvert()
 {
     // Need to have memory allocated for the solver. Allocate 1mb for it.

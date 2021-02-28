@@ -818,7 +818,7 @@ void ProcessFunction(string change,
                      bool isGroup,
                      bool isMaster,
                      bool isMC,
-                     proc& process)
+                     proc process)
 {
     if (isMaster && multiOption != format + "_group")
     {

@@ -1,3 +1,5 @@
 -Need to force include include/Global.h
 -Which version of VS is this targetting? Many issues in VS2019
--Must target 32 bit due to Havok, but CMake generated x64 for me..
+-Must target 32 bit due to Havok, essential to select x86(32bit) in CMake setup
+-Tried to link with python38.lib but according to README requries python35.lib, manual fix in project
+-Some files not included in CMake build causing linker errors? Had to manually include: writeextfile.cpp
